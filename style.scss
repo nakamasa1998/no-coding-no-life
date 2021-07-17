@@ -1,0 +1,220 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Hiragino Mincho Pro',serif;
+	font-size: 18px;
+}
+a{
+	text-decoration: none;
+}
+ul li{
+	list-style: none;
+}
+
+/* --------- HEADER ---------- */
+header{
+	a{
+		color: #fff;
+	}
+	.header-nav{
+	height: 80px;
+	background-color: #2b2b2b;
+	display: flex;
+	width: 100%;
+	}
+	.logo{
+		width: 200px;
+		margin: 15px 10px;
+	}
+	nav{
+		margin: 0 0 0 auto;
+	}
+	.menu{
+		display: flex;
+		color: #fff;	
+		margin: 28px 0;	
+		li{
+			padding-right: 25px;
+		}
+	}
+
+	.fv{
+		position: relative;
+		h1{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 60px;
+		}
+		img{
+			width: 100%;
+			height: 550px;
+			object-fit: cover;
+		}
+	}
+}
+
+/* --------- COURSE ---------- */
+.course{
+	h2{
+		text-align: center;
+		margin: 0;
+		padding: 50px 0 40px;
+	}
+	.course-list{
+		display: flex;
+		justify-content: space-between;
+		margin: 0 28px;
+		.course-item{
+			box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+			width: 24%;
+			.course-info{
+				margin: 20px 11px 0;
+				position: relative;
+				padding-bottom: 40px;
+				}
+			.course-info::before{
+				position: absolute;
+				content: "";
+				width: 80%;
+				left: 10%;
+				bottom: 0;
+				height: 1px;
+				background-color: black;
+			}
+			.course-info-time{
+				margin: 10px 11px 10px;
+				text-align: center;
+				font-size: 16px;
+			}
+		}
+		img{
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+	.button{
+		text-align: center;
+		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+		border-radius: 5px;
+		width: 310px;
+		height: 52px;
+		line-height: 52px;
+		margin: 50px auto 70px;
+	}
+	.btn{
+		margin: 0 auto;
+		color: black;
+	}
+	.button:hover{
+		opacity: .7;
+	}
+}
+
+/* --------- TEACHER ---------- */
+.teacher{
+	margin: 0 20px;
+	h2{
+		text-align: center;
+		font-size: 40px;
+		margin-bottom: 45px;
+	}
+	.teachers-list{
+		display: flex;
+		margin: 0 auto 57px;
+		max-width: 1040px;
+		img{
+			border-radius: 50%;
+			width: 250px;
+			height: 250px;
+			margin-right: 60px;
+		}
+		h3{
+			font-size: 40px;
+		}
+	}
+}
+
+/* --------- CONTACT ---------- */
+.contact{
+	background-image: url(./image/contact-bg.png);
+	background-size: cover;
+	height: 455px;
+	color: #fff;
+	text-align: center;
+	h3{
+		font-size: 36px;
+		padding: 62px 0 53px 0;
+		margin: 0;
+	}
+	p{
+		font-size: 16px;
+		padding-bottom: 32px;
+		margin: 0;
+	}
+	.btn{
+		background-color: #DC143C;
+		padding: 20px 100px;
+		color: #fff;
+		border-radius: 10px;
+	}
+	.btn:hover{
+		opacity: .9;
+	}
+}
+
+footer{
+	background-color: black;
+	text-align: center;
+	color: #fff;
+	font-size: 14px;
+	height: 80px;
+	line-height: 80px;
+}
+@media screen and (max-width:760px){
+	header{
+		.menu{
+			display: none;
+		}
+		.fv h1{
+			font-size: 26px;
+		}
+	}
+	.course{
+		h2{
+			font-size: 40px;
+		}
+		.course-list{
+			display: flex;
+			flex-direction: column;
+			.course-item{
+				width: 90%;
+				margin: 0 auto 30px;
+			}
+			.course-item:nth-child(4){
+				margin: 0 auto;
+			}
+			.course-info-time{
+				font-size: 20px;
+			}
+		}
+	}
+
+	.teachers{
+		.teachers-list{
+			display: flex;
+			flex-direction: column;
+			img {
+				margin: 0 auto;
+			}
+			h3{
+				text-align: center;
+				font-size: 24px;
+			}
+			p{
+				margin: 18px 15px;
+			}
+		}
+	}
+}
